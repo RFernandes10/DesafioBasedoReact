@@ -5,7 +5,11 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/DesafioBasedoReact/',
   plugins: [react(),tailwindcss()],
+  build: {
+    outDir: 'docs',
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
